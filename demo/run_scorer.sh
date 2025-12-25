@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 配置参数
-PROJECT_PATH="/home/lizhen/jiangqun/druggen/GEMGen"
+PROJECT_PATH="path/to/GEMGen"
 DICT_PATH="$PROJECT_PATH/models/scorer"
 MODEL_PATH="$PROJECT_PATH/models/scorer/gemgen_scorer_epoch3.safetensors"
 DATA_PATH="$PROJECT_PATH/data/scorer_test_demo.tsv"

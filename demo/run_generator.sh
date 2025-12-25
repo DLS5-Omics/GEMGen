@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PROJECT_PATH="/home/lizhen/jiangqun/druggen/GEMGen"
+PROJECT_PATH="path/to/GEMGen"
 CKPT_PATH="$PROJECT_PATH/models/generator/checkpoint1"
 INPUT_FILE="$PROJECT_PATH/data/generator_prompts.txt"
 OUTPUT_FILE="$PROJECT_PATH/results/test_generator_output.json"
