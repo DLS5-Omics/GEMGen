@@ -71,7 +71,7 @@ Please refer to the files in the `data/` directory for templates and example dat
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/GEMGen.git
+git clone https://github.com/DLS5-Omics/GEMGen.git
 cd GEMGen
 ```
 
