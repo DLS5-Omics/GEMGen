@@ -1,0 +1,15 @@
+For a given cell population identified as [cell_type], design a compound to increase the expression levels of these genes: [target_genes_upregulated], while simultaneously decreasing the expression of these genes: [target_genes_downregulated].
+Develop a compound targeting [cell_type] cells, intended to boost the transcription of [target_genes_upregulated] and suppress the transcription of [target_genes_downregulated].
+Create a substance that, when applied to [cell_type], will enhance the gene expression for [target_genes_upregulated] and reduce it for [target_genes_downregulated].
+Considering a group of cells defined as [cell_type], formulate a compound that promotes higher expression rates for [target_genes_upregulated] and lower rates for [target_genes_downregulated].
+Engineer a compound for [cell_type] cells aimed at elevating the activity of [target_genes_upregulated] and diminishing the activity of [target_genes_downregulated].
+In order to modulate gene expression in [cell_type], synthesize a compound that upregulates [target_genes_upregulated] and downregulates [target_genes_downregulated].
+With the goal of altering gene expression patterns in [cell_type], construct a compound that increases the expression of [target_genes_upregulated] and decreases the expression of [target_genes_downregulated].
+To influence gene expression within [cell_type], generate a chemical agent that raises the expression levels of [target_genes_upregulated] and lowers those of [target_genes_downregulated].
+Design an experimental compound for [cell_type] that is designed to activate the expression of [target_genes_upregulated] and deactivate the expression of [target_genes_downregulated].
+Propose a biochemical solution for [cell_type] cells which aims to promote the upregulation of [target_genes_upregulated] and the downregulation of [target_genes_downregulated].
+Given a population of cells identified as [cell_type], create a compound that will increase the expression of the following genes: [target_genes_upregulated] and decrease the expression of the following genes: [target_genes_downregulated].
+For a cell population defined as [cell_type], develop a compound that will upregulate the expression of [target_genes_upregulated] and downregulate the expression of [target_genes_downregulated].
+Given a cell population characterized by [cell_type], design a compound to upregulate the expression of [target_genes_upregulated] and downregulate the expression of [target_genes_downregulated].
+In a cell population characterized as [cell_type], formulate a compound that will upregulate the expression of [target_genes_upregulated] and downregulate the expression of [target_genes_downregulated].
+For cells characterized as [cell_type], generate a compound that will enhance the expression of [target_genes_upregulated] and reduce the expression of [target_genes_downregulated].
