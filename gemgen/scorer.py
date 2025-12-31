@@ -2,7 +2,6 @@ import os
 from typing import Optional, Tuple, List
 import argparse
 import pandas as pd
-import torch
 from torch import nn
 from transformers.models.llama.configuration_llama import LlamaConfig
 from transformers.models.llama.modeling_llama import (
@@ -16,6 +15,16 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 from dataset import get_dataloader
+
+try:
+    import torch
+except ImportError:
+    print("Error: PyTorch is required to check CUDA availability.")
+    exit(1)
+
+if not torch.cuda.is_available():
+    print("CUDA is not available. This program requires a CUDA-enabled GPU to run. Exiting.")
+    exit(1)
 
 class NumMLP(nn.Module):
     def __init__(

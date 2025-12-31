@@ -13,6 +13,16 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+try:
+    import torch
+except ImportError:
+    print("Error: PyTorch is required to check CUDA availability.")
+    exit(1)
+
+if not torch.cuda.is_available():
+    print("CUDA is not available. This program requires a CUDA-enabled GPU to run. Exiting.")
+    exit(1)
+    
 
 class GEMGenGenerator:
     def __init__(
