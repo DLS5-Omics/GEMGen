@@ -10,6 +10,11 @@ It consists of two core components:
 The framework is designed for flexible inference and can be easily adapted to different biological contexts and datasets.
 
 ---
+📄 **Preprint Now Available on bioRxiv**  
+The preprint of our paper is now publicly available on **bioRxiv**.  
+Read it here: [https://www.biorxiv.org/content/10.64898/2026.01.03.697483v1.full.pdf](https://www.biorxiv.org/content/10.64898/2026.01.03.697483v1.full.pdf)
+
+---
 
 ## Installation
 
@@ -37,7 +42,7 @@ pip install vllm==0.7.3
 
 Pretrained model checkpoints are required for both the generator and the scorer.
 
-1. Download the checkpoint folder from **[xxxxx website]**.
+1. Download the checkpoint folder from **[Zenodo website]** (will release soon).
 2. Place the checkpoint directory at a desired local path.
 3. Update the corresponding checkpoint paths in the demo scripts:
 
