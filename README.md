@@ -4,7 +4,7 @@
 **GEMGen** is a generative model for **phenotype-based drug discovery**.  
 It consists of two core components:
 
-- **Generator**: generates small-molecule candidates conditioned on *cell type information* and *lists of up- and down-regulated genes* from differential expression analysis.
+- **Generator**: generates small-molecule candidates conditioned on *cell type* information and *lists of up- and down-regulated genes* from differential expression analysis.
 - **Scorer**: evaluates how well a generated small molecule matches the given phenotypic input.
 
 The framework is designed for flexible inference and can be easily adapted to different biological contexts and datasets.
