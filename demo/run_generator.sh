@@ -35,6 +35,12 @@ if [ ! -f "$CKPT_PATH/model.safetensors" ]; then
     exit 1
 fi
 
+# Check project path
+if [ "$PROJECT_PATH" = "path/to/GEMGen" ]; then
+    echo "ERROR: Please update PROJECT_PATH to the actual project directory."
+    exit 1
+fi
+
 # Create output directory if it doesn't exist
 OUTPUT_DIR=$(dirname "$OUTPUT_FILE")
 if [ ! -d "$OUTPUT_DIR" ]; then
