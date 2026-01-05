@@ -50,7 +50,8 @@ if [ ! -d "$OUTPUT_DIR" ]; then
 fi
 
 echo "Running GEMGen generator..."
-python $PROJECT_PATH/gemgen/generator.py \
+# Ensure the correct CUDA runtime is used (avoid system CUDA overriding pip wheels).
+LD_LIBRARY_PATH= python $PROJECT_PATH/gemgen/generator.py \
     --tokenizer_path "$CKPT_PATH" \
     --ckpt_path "$CKPT_PATH" \
     --input_file "$INPUT_FILE" \
