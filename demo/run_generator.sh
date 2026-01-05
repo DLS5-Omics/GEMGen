@@ -16,6 +16,13 @@ TEMPERATURE=1
 TOP_P=0.95
 SAMPLE_COUNT=100
 
+
+# Check project path
+if [ "$PROJECT_PATH" = "path/to/GEMGen" ]; then
+    echo "ERROR: Please update PROJECT_PATH to the actual project directory."
+    exit 1
+fi
+
 # Check if input file exists
 if [ ! -f "$INPUT_FILE" ]; then
     echo "Error: Input file does not exist $INPUT_FILE"
@@ -32,12 +39,6 @@ fi
 if [ ! -f "$CKPT_PATH/model.safetensors" ]; then
     echo "Error: No model files found in $CKPT_PATH"
     echo "Please check if the model files (model.safetensors) exist"
-    exit 1
-fi
-
-# Check project path
-if [ "$PROJECT_PATH" = "path/to/GEMGen" ]; then
-    echo "ERROR: Please update PROJECT_PATH to the actual project directory."
     exit 1
 fi
 
