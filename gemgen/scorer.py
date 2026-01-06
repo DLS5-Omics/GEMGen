@@ -258,8 +258,10 @@ def main():
     logger.info("Loading test data...")
     if args.data_path.endswith('.csv'):
         test_df = pd.read_csv(args.data_path)
+        sep = ','
     elif args.data_path.endswith('.tsv'):
         test_df = pd.read_csv(args.data_path, sep='\t')
+        sep = '\t'
     else:
         raise ValueError("Unsupported file format. Please provide a CSV or TSV file.")
     
@@ -272,7 +274,7 @@ def main():
         shuffle=False,
         max_len=args.max_len,
         padding_idx=0,
-        sep="\t",
+        sep=sep,
         num_workers=args.num_workers
     )
     
