@@ -25,12 +25,11 @@ conda activate gemgen
 
 ### 2. Install Dependencies
 
-GEMGen depends on vllm, whose installation already covers most of the required Python packages (such as torch, transformers, etc.). You will only need to install pandas additionally.
+GEMGen depends on `vllm==0.7.3`, whose installation already covers most of the required Python packages (such as torch, transformers, etc.). You will only need to install pandas and rdkit additionally.
 
 ```bash
 pip install vllm==0.7.3
 pip install pandas==2.3.3
-# Install rdkit if evaluation is needed
 pip install rdkit==2024.3.1
 ```
 
