@@ -83,7 +83,8 @@ echo "INFO: Input data: $DATA_PATH"
 echo "INFO: Output will be saved to: $OUTPUT_PATH"
 echo "INFO: Starting execution..."
 
-python "$SCORER_SCRIPT" \
+# Ensure the correct CUDA runtime is used (avoid system CUDA overriding pip wheels).
+LD_LIBRARY_PATH= python "$SCORER_SCRIPT" \
     --dict_path "$DICT_PATH" \
     --model_path "$MODEL_PATH" \
     --data_path "$DATA_PATH" \

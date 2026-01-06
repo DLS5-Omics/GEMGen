@@ -16,6 +16,13 @@ TEMPERATURE=1
 TOP_P=0.95
 SAMPLE_COUNT=100
 
+
+# Check project path
+if [ "$PROJECT_PATH" = "path/to/GEMGen" ]; then
+    echo "ERROR: Please update PROJECT_PATH to the actual project directory."
+    exit 1
+fi
+
 # Check if input file exists
 if [ ! -f "$INPUT_FILE" ]; then
     echo "Error: Input file does not exist $INPUT_FILE"
@@ -43,7 +50,8 @@ if [ ! -d "$OUTPUT_DIR" ]; then
 fi
 
 echo "Running GEMGen generator..."
-python $PROJECT_PATH/gemgen/generator.py \
+# Ensure the correct CUDA runtime is used (avoid system CUDA overriding pip wheels).
+LD_LIBRARY_PATH= python $PROJECT_PATH/gemgen/generator.py \
     --tokenizer_path "$CKPT_PATH" \
     --ckpt_path "$CKPT_PATH" \
     --input_file "$INPUT_FILE" \
