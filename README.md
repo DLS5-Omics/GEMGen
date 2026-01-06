@@ -30,6 +30,8 @@ GEMGen depends on vllm, whose installation already covers most of the required P
 ```bash
 pip install vllm==0.7.3
 pip install pandas==2.3.3
+# Install rdkit if evaluation is needed
+pip install rdkit==2024.3.1
 ```
 
 > **Note**

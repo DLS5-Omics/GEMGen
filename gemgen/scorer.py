@@ -256,7 +256,12 @@ def main():
     
     # Load test data
     logger.info("Loading test data...")
-    test_df = pd.read_csv(args.data_path, sep='\t')
+    if args.data_path.endswith('.csv'):
+        test_df = pd.read_csv(args.data_path)
+    elif args.data_path.endswith('.tsv'):
+        test_df = pd.read_csv(args.data_path, sep='\t')
+    else:
+        raise ValueError("Unsupported file format. Please provide a CSV or TSV file.")
     
     # Create data loader
     logger.info("Creating data loader...")
@@ -332,8 +337,13 @@ def main():
     # Ensure output directory exists
     os.makedirs(os.path.dirname(args.output_path), exist_ok=True)
     
-    # Save as TSV file
-    test_df.to_csv(args.output_path, sep='\t', index=False)
+    # Save as TSV/CSV file
+    if args.output_path.endswith('.csv'):
+        test_df.to_csv(args.output_path, index=False)
+    elif args.output_path.endswith('.tsv'):
+        test_df.to_csv(args.output_path, sep='\t', index=False)
+    else:
+        raise ValueError("Unsupported file format. Please provide a CSV or TSV file.")
     
     # Output statistics
     logger.info("Inference completed successfully!")
