@@ -376,13 +376,6 @@ def main():
         print(f"SAS (mean ± std): {df['SAS'].mean():.3f} ± {df['SAS'].std():.3f}")
         print(f"Ro5 compliant: {df['Ro5'].sum()} ({df['Ro5'].mean()*100:.1f}%)")
     
-    if 'max_similarity_to_gt' in df.columns:
-        valid_sim = df['max_similarity_to_gt'].dropna()
-        if len(valid_sim) > 0:
-            print(f"Max similarity to GT (mean ± std): {valid_sim.mean():.3f} ± {valid_sim.std():.3f}")
-        else:
-            print("No valid similarity scores calculated")
-    
     print("Processing finished successfully.")
 
 
