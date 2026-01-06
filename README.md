@@ -11,7 +11,7 @@ The framework is designed for flexible inference and can be easily adapted to di
 
 ## Preprint Now Available on bioRxiv 
 The preprint of our paper is now publicly available on **bioRxiv**.  
-Read it here: [https://www.biorxiv.org/content/10.64898/2026.01.03.697483v1.full.pdf](https://www.biorxiv.org/content/10.64898/2026.01.03.697483v1.full.pdf)
+Read it here: [https://www.biorxiv.org/content/10.64898/2026.01.03.697483v2.full.pdf](https://www.biorxiv.org/content/10.64898/2026.01.03.697483v2.full.pdf)
 
 
 ## Installation
