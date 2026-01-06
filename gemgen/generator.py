@@ -3,9 +3,10 @@ import json
 from pathlib import Path
 from vllm import LLM, SamplingParams
 from tqdm import tqdm
-
+import re
 from utils import read_lines
 from nlm_tokenizer import NatureLM1BTokenizer
+from science_tokens import SCIENCE_TOKENS
 
 import warnings
 warnings.filterwarnings("ignore")
@@ -48,14 +49,19 @@ class GEMGenGenerator:
 
         self.model = llm
         self.tokenizer = tokenizer
-
     def decode_and_process(self, token_ids):
         s = self.tokenizer.decode(token_ids)
         segs = s.split(self.tokenizer.eos_token)
         resp = segs[0].strip()
         if "<mol>" in resp:
-            resp = resp.replace("<m>", "").replace("<mol>", "").replace("</mol>", "")
-    
+            tokens_in_resp = re.findall(r"<m>[^<]+", resp)
+            has_invalid = any(tok not in SCIENCE_TOKENS for tok in tokens_in_resp)
+            if has_invalid:
+                resp = 'Error'+resp
+            else:
+                resp = resp.replace("<m>", "").replace("<mol>", "").replace("</mol>", "")
+        else:
+            resp='Error'+resp
         return resp
 
     def chat_batch(self, input_list,**kwargs):
