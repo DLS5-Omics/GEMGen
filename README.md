@@ -1,5 +1,5 @@
 
-# GEMGen
+# Phenotype-Guided In Silico Molecular Generation Using Large Language Models
 
 **GEMGen** is a generative model for **phenotype-based drug discovery**.  
 It consists of two core components:
