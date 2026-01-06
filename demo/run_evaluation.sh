@@ -64,4 +64,4 @@ echo "Input:  $INPUT_JSON"
 echo "Output: $OUTPUT_CSV"
 echo "----------------------------------------"
 
-python -u "$PROJECT_PATH/gemgen/evaluate.py" "${CMD_ARGS[@]}"
+python -u "$PROJECT_PATH/gemgen/evaluation.py" "${CMD_ARGS[@]}"
