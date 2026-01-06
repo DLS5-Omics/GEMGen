@@ -6,6 +6,7 @@ from torch.utils.data import Dataset
 from nlm_tokenizer import NatureLM1BTokenizer
 import warnings
 warnings.filterwarnings("ignore")
+from tqdm import tqdm
 
 import logging
 logging.basicConfig(level=logging.INFO)
@@ -87,7 +88,9 @@ class ScorerDataset(Dataset):
         data_list = []
         skipped_count = 0
         
-        for idx, row in self.df.iterrows():
+        for idx, row in tqdm(self.df.iterrows(), 
+                            total=len(self.df), 
+                            desc="Preprocessing data"):
             processed = self._preprocess_single_sample(row)
             if processed is not None:
                 data_list.append(processed)
