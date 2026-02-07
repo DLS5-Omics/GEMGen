@@ -92,4 +92,5 @@ LD_LIBRARY_PATH= python "$SCORER_SCRIPT" \
     --output_path "$OUTPUT_PATH" \
     --batch_size "$BATCH_SIZE" \
     --max_len "$MAX_LEN" \
-    --num_workers "$NUM_WORKERS"
+    --num_workers "$NUM_WORKERS" \
+    --save_input_columns
