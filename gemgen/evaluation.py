@@ -54,22 +54,32 @@ def is_valid_smiles(smiles):
 
 def deduplicate_smiles_for_prompt(prompt_smiles_list):
     """
-    Deduplicate SMILES for a single prompt.
-    
+    Deduplicate SMILES for a single prompt with standardization.
+
     Args:
         prompt_smiles_list (list): List of SMILES strings for a prompt.
-    
+
     Returns:
-        list: Deduplicated list of valid SMILES.
+        list: Deduplicated list of valid standardized SMILES.
     """
     seen = set()
     unique_valid = []
-    
+
     for smiles in prompt_smiles_list:
-        if smiles not in seen and is_valid_smiles(smiles):
-            seen.add(smiles)
-            unique_valid.append(smiles)
-    
+        # Convert SMILES to molecule object
+        mol = Chem.MolFromSmiles(smiles)
+        if mol is None:
+            continue  # Skip invalid SMILES
+
+        # Convert molecule back to canonical SMILES for standardization
+        std_smiles = Chem.MolToSmiles(mol, canonical=True)
+
+        # Check if this standardized SMILES has been seen
+        if std_smiles not in seen:
+            seen.add(std_smiles)
+            # Store the standardized SMILES for consistency
+            unique_valid.append(std_smiles)
+
     return unique_valid
 
 
