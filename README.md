@@ -32,7 +32,7 @@ pip install -r requirements.txt
 Alternatively, you may install them manually:
 ```bash
 pip install vllm==0.7.3
-pip install transformers==4.56.7
+pip install transformers==4.57.6
 pip install pandas==2.3.3
 pip install rdkit==2024.3.1
 ```
