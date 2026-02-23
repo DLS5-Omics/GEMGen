@@ -46,7 +46,7 @@ pip install rdkit==2024.3.1
 
 Pretrained model checkpoints are required for both the generator and the scorer.
 
-1. Download the checkpoint folder from **[Zenodo website]** (will be released soon).
+1. Download the checkpoint folder from **[10.5281/zenodo.18739230](https://zenodo.org/records/18739231)**.
 2. Place the checkpoint directory at a desired local path.
 3. Update the corresponding checkpoint paths in the demo scripts:
 

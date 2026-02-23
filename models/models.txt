@@ -1,1 +1,1 @@
-You need download models files from xxxxx and place them in the folder.
+You need download models files from https://zenodo.org/records/18739231 and place them in the folder.
