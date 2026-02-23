@@ -51,6 +51,7 @@ Pretrained model checkpoints are required for both the generator and the scorer.
 3. Update the corresponding checkpoint paths in the demo scripts:
 
    * `demo/run_generator.sh`
+   * `demo/run_evaluation.sh`
    * `demo/run_scorer.sh`
 
 ---
