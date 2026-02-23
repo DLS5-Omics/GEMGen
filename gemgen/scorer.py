@@ -224,7 +224,7 @@ class GEMGenScorer(LlamaPreTrainedModel):
                     batch_scores = self.predict_batch(batch, self.args.device)
                     all_scores.extend(batch_scores.cpu().numpy())
                     
-            return all_scores.tolist()
+            return all_scores
             
         finally:
             # Clean up temporary file
